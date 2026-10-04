@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jeux Open Source pour Apprendre — Action-RPG, Course, Moteurs 2D</title>
+<meta name="description" content="Flare, Dust Racing 2D, LÖVE, Lumina Engine, PLUSKAIZO, Simple Shooter, GameKit : jeux et moteurs open source pour apprendre le dev jeu vidéo.">
+<style>
+:root{--bg:#0f1220;--card:#1a1f36;--accent:#ffb020;--accent2:#4cc9f0;--text:#eef1ff;--muted:#a7b0d0}
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,sans-serif;background:var(--bg);color:var(--text);line-height:1.55}
+header.hero{padding:56px 20px 32px;text-align:center;background:radial-gradient(800px 400px at 50% -10%,#2a3566 0%,#0f1220 70%)}
+header.hero h1{margin:0 0 12px;font-size:clamp(26px,4vw,44px)}header.hero h1 span{color:var(--accent)}
+header.hero p{max-width:760px;margin:0 auto;color:var(--muted);font-size:17px}
+.badges{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:16px}
+.badges span{background:#242b4d;border:1px solid #343c6b;padding:4px 12px;border-radius:999px;font-size:13px;color:#d5dbff}
+main{max-width:1080px;margin:0 auto;padding:24px 20px 60px}
+section h2{margin:40px 0 8px;font-size:24px;border-left:5px solid var(--accent);padding-left:12px}
+section>p.sub{color:var(--muted);margin:0 0 18px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px}
+.card{background:var(--card);border:1px solid #2b3358;border-radius:14px;padding:18px;display:flex;flex-direction:column;gap:10px}
+.card h3{margin:0;font-size:19px}.card h3 small{font-weight:400;color:var(--accent2);font-size:13px}
+.card p{margin:0;color:#d6dcf5;font-size:14.5px}
+.meta{display:flex;flex-wrap:wrap;gap:6px;margin-top:4px}.meta code{background:#0d1024;border:1px solid #323a68;padding:2px 8px;border-radius:6px;font-size:12.5px;color:#cfe3ff}
+.links{display:flex;gap:10px;flex-wrap:wrap;margin-top:auto;padding-top:8px}
+.links a{color:#0f1220;background:var(--accent);text-decoration:none;font-weight:700;font-size:13.5px;padding:7px 12px;border-radius:8px}
+.links a.ghost{background:transparent;color:var(--accent2);border:1px solid var(--accent2)}
+.level{font-size:13px;color:var(--muted)}
+.demo{background:#12162e;border:1px solid #2e3766;border-radius:14px;padding:18px;margin-top:16px}
+.demo canvas{width:100%;height:300px;background:#05070f;border-radius:10px;display:block;border:1px solid #2c3563}
+.demo .row{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin:12px 0}
+.demo button{background:var(--accent2);border:0;font-weight:800;padding:8px 14px;border-radius:8px;cursor:pointer}
+.demo button.secondary{background:transparent;color:var(--text);border:1px solid #4a548a}
+pre{background:#05070f;border:1px solid #2a335f;border-radius:10px;padding:14px;overflow:auto;font-size:13px;color:#c9f5ff}
+footer{text-align:center;color:var(--muted);padding:30px 20px;font-size:13.5px;border-top:1px solid #232a4f}
+a.inline{color:var(--accent2)}
+@media(max-width:600px){header.hero{padding:36px 16px 24px}.demo canvas{height:240px}}
+</style>
+</head>
+<body>
+<header class="hero">
+<h1>🎮 Jeux <span>Open Source</span> pour apprendre le jeu vidéo</h1>
+<p>Une sélection de jeux complets, moteurs 2D et mini-projets moddables — du Action-RPG C++ au shooter HTML5 jouable dans le navigateur. Tous gratuits, tous modifiables.</p>
+<div class="badges"><span>✔ 100% open source</span><span>✔ Débutant → avancé</span><span>✔ C++ • Lua • JS • Python • C#</span><span>✔ Moddable</span></div>
+</header>
+<main>
+<section>
+<h2>⚔️ Jeux complets à explorer &amp; modder</h2>
+<p class="sub">Des jeux jouables + leur code source : idéal pour comprendre une boucle de jeu, des compétences, une IA ou un éditeur de niveaux.</p>
+<div class="grid">
+<article class="card">
+<h3>Flare — Action-RPG 2D <small>Diablo-like</small></h3>
+<p>Action-RPG classique avec compétences et arbre de talents. Écrit en C++, entièrement moddable via fichiers INI + Tiled. Jeu officiel : Empyrean Campaign.</p>
+<div class="meta"><code>C++ / SDL2</code><code>GPL-3.0</code><code>Tiled</code><code>~1300 ★</code></div>
+<p class="level">🎯 Pour : amateurs du genre, modding sans toucher au moteur. Build : CMake + SDL2.</p>
+<div class="links"><a href="https://github.com/flareteam/flare-engine">Moteur Flare</a><a class="ghost" href="https://github.com/flareteam/flare-game">Jeu Empyrean</a><a class="ghost" href="https://flarerpg.org/">Site</a></div>
+</article>
+<article class="card">
+<h3>Dust Racing 2D — Course vue de dessus</h3>
+<p>Jeu de course tile-based avec éditeur de niveaux intégré, physique MiniCore, 1-2 joueurs écran partagé contre 11 IA, pit-stops, contre-la-montre.</p>
+<div class="meta"><code>C++ / Qt6 / OpenGL</code><code>GPL-3.0</code><code>Éditeur inclus</code></div>
+<p class="level">🎯 Pour : comprendre Qt + OpenGL + physique 2D. <code>mkdir build &amp;&amp; cmake .. &amp;&amp; make</code></p>
+<div class="links"><a href="https://github.com/juzzlin/DustRacing2D">GitHub DustRacing2D</a><a class="ghost" href="https://juzzlin.github.io/DustRacing2D/">Démo</a></div>
+</article>
+<article class="card">
+<h3>Just Run — Plateforme / Course <small>Unity solo-dev</small></h3>
+<p>Petit jeu Unity bien documenté créé par un dev solo pour progresser. Parfait pour débuter : code commenté, scènes simples, boucle runner.</p>
+<div class="meta"><code>Unity / C#</code><code>Débutant</code><code>Bien documenté</code></div>
+<p class="level">🎯 Pour : premier pas Unity sans se noyer. Ouvrir la scène principale, lire les scripts MonoBehaviour.</p>
+<div class="links"><a href="https://unity.com/fr" class="ghost">Unity Learn</a></div>
+</article>
+</div>
+</section>
+<section>
+<h2>🛠️ Moteurs et outils pour créer des jeux</h2>
+<p class="sub">Trois philosophies : framework minimal Lua, moteur web ECS sans dépendance, moteur plateforme Mario-like.</p>
+<div class="grid">
+<article class="card">
+<h3>LÖVE (Love2D) — 2D en Lua</h3>
+<p>Moteur 2D simple et facile à apprendre, basé sur Lua. Zlib-libre (usage commercial OK). Exemple : Lizard Journey. Utilisé dans le cours CS50 de Harvard.</p>
+<div class="meta"><code>Lua / C++</code><code>zlib</code><code>Win/Mac/Linux/Android/iOS</code><code>~8400 ★</code></div>
+<p class="level">🎯 Hello world : <code>function love.draw() love.graphics.print('Hello World!',400,300) end</code></p>
+<div class="links"><a href="https://love2d.org/">love2d.org</a><a class="ghost" href="https://github.com/love2d/love">GitHub</a></div>
+</article>
+<article class="card">
+<h3>Lumina Engine — 2D + éditeur visuel <small>JS pur</small></h3>
+<p>Moteur 2D complet avec éditeur WYSIWYG, écrit en JavaScript pur, zéro dépendance. Parfait pour comprendre l’architecture d’un moteur (ECS) sans framework externe.</p>
+<div class="meta"><code>JS ES6+ / Canvas</code><code>ECS</code><code>Tilemap • Lumières • Particules</code></div>
+<p class="level">🎯 Pour : étudiants, curieux ECS. Clone → ouvre <code>index.html</code>, aucun build.</p>
+<div class="links"><a href="https://github.com/uareke/LuminaGameEngine">GitHub Lumina</a></div>
+</article>
+<article class="card">
+<h3>PLUSKAIZO — Moteur plateforme <small>Mario-like</small></h3>
+<p>Moteur open source inspiré de Mario (SMBX / SMW), écrit en Lua sur LÖVE. Save-states, éditeur de niveaux, support Tiled, Windows/Linux/macOS/Android.</p>
+<div class="meta"><code>Lua / LÖVE / Tiled</code><code>GPL-3.0</code><code>Moddable</code></div>
+<p class="level">🎯 Pour : créer son platformer et le partager. Entités = contrôle total du moteur.</p>
+<div class="links"><a href="https://github.com/M0REKZ/PLUSKAIZO">GitHub PLUSKAIZO</a><a class="ghost" href="https://m0rekz.itch.io/pluskaizo">itch.io</a></div>
+</article>
+</div>
+</section>
+<section>
+<h2>🧪 Petits projets pour apprendre</h2>
+<p class="sub">Zéro installation, résultats immédiats dans le navigateur ou avec le seul Python standard.</p>
+<div class="grid">
+<article class="card">
+<h3>Simple Shooter — HTML5 Canvas pur</h3>
+<p>Jeu de tir vue de dessus, simple, en JavaScript pur sans bibliothèque. Jouable directement dans le navigateur. Excellent point de départ pour modifier le code.</p>
+<div class="meta"><code>JS / Canvas</code><code>Aucune dépendance</code><code>Débutant ★</code></div>
+<p class="level">🎯 Idée d’exo : changer vitesse, ajouter vagues, power-ups. Démo jouable ci-dessous.</p>
+<div class="links"><a href="#demo-shooter">Essayer la démo ↓</a></div>
+</article>
+<article class="card">
+<h3>GameKit — Python stdlib uniquement</h3>
+<p>Bibliothèque Python très légère (tkinter + winsound uniquement). API ultra-simplifiée : jeu complet en un seul fichier et en quelques lignes. Alternative pédagogique à Pygame.</p>
+<div class="meta"><code>Python 3.9+</code><code>MIT</code><code>pip install gamekit2d</code></div>
+<p class="level">🎯 40 secondes pour afficher une fenêtre jouable. Parfait en école / atelier.</p>
+<div class="links"><a href="https://pypi.org/project/gamekit2d/">PyPI gamekit2d</a><a class="ghost" href="https://github.com/yuleemoon/gamekit2d">GitHub</a><a class="ghost" href="https://github.com/dessaya/python-gamelib">python-gamelib</a></div>
+</article>
+</div>
+<div class="demo" id="demo-shooter">
+<h3 style="margin:0 0 6px">👾 Démo jouable — Simple Shooter (Canvas pur, sans lib)</h3>
+<p style="margin:0 0 10px;color:var(--muted);font-size:14px">Bouge : souris / flèches • Tir auto • Survivre aux vagues. Le code tient en ~60 lignes, modifie-le !</p>
+<div class="row"><button id="btnStart">▶ Démarrer</button><button id="btnReset" class="secondary">↺ Recommencer</button><span id="score" style="font-weight:800">Score : 0</span><span id="lives" style="color:var(--muted)">Vies : 3</span></div>
+<canvas id="game" width="960" height="300"></canvas>
+<pre>// Extrait : boucle Update → Render, AABB simple
+player.x += (keys.right?4:0) - (keys.left?4:0);
+bullets.forEach(b =&gt; b.y -= 7);
+enemies.forEach(e =&gt; e.y += e.speed);
+if (collision(b,e)) { score+=10; explode(e); }</pre>
+</div>
+<script>
+(function(){
+var c=document.getElementById('game'),x=c.getContext('2d');
+var W=c.width,H=c.height,run=false,score=0,lives=3,t=0;
+var p={x:W/2,y:H-30,r:12},bul=[],ene=[],par=[];
+var keys={};
+function spawn(){ene.push({x:20+Math.random()*(W-40),y:-16,r:10+Math.random()*8,speed:1+Math.random()*1.6+score/400});}
+for(var i=0;i<6;i++)spawn();
+function boom(px,py,n,col){for(var k=0;k<n;k++)par.push({x:px,y:py,vx:(Math.random()-0.5)*4,vy:(Math.random()-0.5)*4,l:26,col:col||'#ffb020'});}
+document.getElementById('btnStart').onclick=function(){run=true;this.textContent='⏸ Pause';if(this.dataset.p==='1'){run=false;this.dataset.p='';this.textContent='▶ Reprendre';}else if(!run){} };
+document.getElementById('btnStart').addEventListener('click',function(){if(run&&this.dataset.p==='1'){run=false;this.dataset.p='';this.textContent='▶ Reprendre';}else if(!run&&this.textContent.indexOf('Pause')===0){} });
+var btn=document.getElementById('btnStart');var paused=false;
+btn.onclick=function(){if(!run&&!paused){run=true;btn.textContent='⏸ Pause';}else if(run){run=false;paused=true;btn.textContent='▶ Reprendre';}else{run=true;paused=false;btn.textContent='⏸ Pause';}};
+document.getElementById('btnReset').onclick=function(){score=0;lives=3;bul=[];ene=[];par=[];for(var i=0;i<6;i++)spawn();run=true;paused=false;btn.textContent='⏸ Pause';};
+addEventListener('keydown',function(e){keys[e.key.toLowerCase()]=true;if(e.key==='ArrowLeft')keys.left=true;if(e.key==='ArrowRight')keys.right=true;});
+addEventListener('keyup',function(e){keys[e.key.toLowerCase()]=false;if(e.key==='ArrowLeft')keys.left=false;if(e.key==='ArrowRight')keys.right=false;});
+c.addEventListener('mousemove',function(e){var r=c.getBoundingClientRect();p.x=(e.clientX-r.left)*(W/r.width);});
+function loop(){requestAnimationFrame(loop);t++;
+x.fillStyle='#05070f';x.fillRect(0,0,W,H);
+x.strokeStyle='#1d2547';for(var gx=0;gx<W;gx+=40){x.beginPath();x.moveTo(gx,0);x.lineTo(gx,H);x.stroke();}
+if(run){if(keys.left||keys.a)p.x-=4;if(keys.right||keys.d)p.x+=4;p.x=Math.max(14,Math.min(W-14,p.x));
+if(t%14===0)bul.push({x:p.x,y:p.y-14});
+if(t%50===0)spawn();
+bul.forEach(function(b){b.y-=7;});ene.forEach(function(e){e.y+=e.speed;});
+for(var i=ene.length-1;i>=0;i--){var e=ene[i];
+for(var j=bul.length-1;j>=0;j--){var b=bul[j];var dx=e.x-b.x,dy=e.y-b.y;if(dx*dx+dy*dy<(e.r+4)*(e.r+4)){boom(e.x,e.y,12,'#4cc9f0');ene.splice(i,1);bul.splice(j,1);score+=10;break;}}
+if(!ene[i])continue;
+var pdx=e.x-p.x,pdy=e.y-p.y;if(pdx*pdx+pdy*pdy<(e.r+p.r)*(e.r+p.r)){boom(p.x,p.y,18,'#ff5470');ene.splice(i,1);lives--;if(lives<=0){run=false;boom(p.x,p.y,40,'#ff5470');}}}
+ene=ene.filter(function(e){return e.y<H+30;});bul=bul.filter(function(b){return b.y>-10;});
+document.getElementById('score').textContent='Score : '+score;document.getElementById('lives').textContent='Vies : '+lives;
+}
+par=par.filter(function(q){return q.l>0;});par.forEach(function(q){q.x+=q.vx;q.y+=q.vy;q.l--;x.fillStyle=q.col;x.fillRect(q.x,q.y,3,3);});
+x.fillStyle='#4cc9f0';x.beginPath();x.moveTo(p.x,p.y-14);x.lineTo(p.x-11,p.y+10);x.lineTo(p.x+11,p.y+10);x.closePath();x.fill();
+x.fillStyle='#ffb020';bul.forEach(function(b){x.fillRect(b.x-2,b.y-6,4,8);});
+ene.forEach(function(e){x.fillStyle='#ff5470';x.beginPath();x.arc(e.x,e.y,e.r,0,7);x.fill();x.fillStyle='#fff';x.fillRect(e.x-3,e.y-2,6,4);});
+if(!run&&lives>0&&t>5){x.fillStyle='rgba(255,255,255,.85)';x.font='16px system-ui';x.fillText('Clique Démarrer — souris / ← → pour bouger',W/2-180,H/2);}
+if(lives<=0){x.fillStyle='#fff';x.font='bold 22px system-ui';x.fillText('Game Over — score '+score,W/2-130,H/2);}
+}
+loop();setTimeout(function(){run=true;document.getElementById('btnStart').textContent='⏸ Pause';},600);
+})();
+</script>
+</section>
+<section>
+<h2>🚀 Par où commencer ?</h2>
+<div class="grid">
+<article class="card"><h3>Tu débutes totally ?</h3><p>1) Joue à la démo ci-dessus et change une valeur (vitesse, vies). 2) Installe <a class="inline" href="https://love2d.org/">LÖVE</a> + ouvre un <code>main.lua</code>. 3) Puis <code>pip install gamekit2d</code> pour un jeu Python en 1 fichier.</p></article>
+<article class="card"><h3>Tu veux modder ?</h3><p>Flare (INI + Tiled) et Dust Racing 2D (éditeur intégré) se moddent sans réécrire le moteur. PLUSKAIZO permet de publier ton propre platformer sous GPL-3.0.</p></article>
+<article class="card"><h3>Tu veux comprendre un moteur ?</h3><p>Lis <a class="inline" href="https://github.com/uareke/LuminaGameEngine">Lumina Engine</a> : ECS, game-loop, delta-time, AABB, particules — 100% vanilla JS, exécutable dans le navigateur.</p></article>
+</div>
+</section>
+</main>
+<footer>Page statique de démonstration — contenu pédagogique open source. Licences : Flare GPL-3.0 • DustRacing2D GPL-3.0 • LÖVE zlib • PLUSKAIZO GPL-3.0 • GameKit MIT.<br>Liens : flareteam/flare-engine • juzzlin/DustRacing2D • love2d/love • uareke/LuminaGameEngine • M0REKZ/PLUSKAIZO • gamekit2d</footer>
+</body>
+</html>
